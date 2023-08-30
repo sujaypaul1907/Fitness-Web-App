@@ -1,0 +1,335 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PAUL FITNESS MUMBAI</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="static/assets/css/style.css" rel="stylesheet">
+
+ 
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0"><a href="/">PAUL FITNESS<span>.</span></a></h1>
+      
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="/about">About</a></li>
+          <li><a class="nav-link scrollto" href="/services">Services</a></li>
+          <li><a class="nav-link scrollto " href="/gallery">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="/contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="/join">Enrollment</a></li>
+
+
+          {% if not request.user.is_authenticated %}
+
+          <li><a class="nav-link scrollto" href="/log-in">Login</a></li>
+         {% else %}
+         <li><a class="nav-link scrollto" href="/logout">Logout</a></li>
+
+         {% endif %}
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+      <a href="/" class="get-started-btn scrollto">Welcome</a>
+    </div>
+  </header>
+
+  <section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-xl-6 col-lg-8">
+          <h1>Champions train, Losers complain<span>.</span></h1>
+          <h2>!!! Join Paul Fitness and Transform !!!</h2>
+        </div>
+      </div>
+
+      <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-fire-fill"></i>
+            <h3><a href="">Biceps | Triceps</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-blaze-fill"></i>
+            <h3><a href="">Back</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-meteor-fill"></i>
+            <h3><a href="">Shoulders</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-flashlight-fill"></i>
+            <h3><a href="">Chest</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-shining-fill"></i>
+            <h3><a href="">Legs</a></h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <main id="main">
+
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="static/assets/img/about1.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+            <h3>Welcome to Paul Fitness, where fitness becomes a lifestyle and community fuels your journey. </h3>
+            <p class="fst-italic">
+                Our mission is to inspire and empower you to reach new heights of wellness, strength, and vitality. 
+            <ul>
+              <li><i class="ri-check-double-line"></i>Our team of experienced trainers is dedicated to guiding you on your path to success</li>
+              <li><i class="ri-check-double-line"></i>Step into our state-of-the-art facility, equipped with cutting-edge gear designed to optimize your workouts</li>
+              <li><i class="ri-check-double-line"></i>We're a supportive and diverse community that cheers for your victories and motivates you through challenges</li>
+            </ul>
+            <p>
+                From heart-pounding classes to personalized training, Paul Fitness is the destination where dedication meets transformation. Join us today and embark on a fitness adventure like no other.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="workout" class="workout">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="static/assets/img/workout/workout-1.jpg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/assets/img/workout/workout-2.jpg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/assets/img/workout/workout-3.jpg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/assets/img/workout/workout-4.jpg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/assets/img/workout/workout-5.jpg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/assets/img/workout/workout-6.jpg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/assets/img/workout/workout-7.jpg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/assets/img/workout/workout-8.jpg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="static/assets/img/workout/workout-9.jpg" class="img-fluid" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="image col-lg-6" style='background-image: url("static/assets/img/features.jpg");' data-aos="fade-right"></div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+            <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+              <i class="bx bx-receipt"></i>
+              <h4>State-of-the-Art Facilities</h4>
+              <p>Experience workouts like never before with our top-of-the-line equipment and modern facilities.</p>
+            </div>
+            <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
+              <i class="bx bx-cube-alt"></i>
+              <h4>Expert Trainers</h4>
+              <p>Our certified trainers are dedicated to guiding you every step of the way on your fitness journey.</p>
+            </div>
+            <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
+              <i class="bx bx-images"></i>
+              <h4>Personalized Approach</h4>
+              <p>Your goals are unique, and so is our approach. We tailor our programs to match your aspirations.</p>
+            </div>
+            <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
+              <i class="bx bx-shield"></i>
+              <h4>Supportive Community</h4>
+              <p>Join a community that cheers for your success, providing the camaraderie and motivation you need.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="text-center">
+          <h3>Call To Action</h3>
+          <p> Fitness is more than just a workout – it's a lifestyle. Join the Paul Fitness community and surround yourself with like-minded individuals who are passionate about health and wellness. Your journey to a better you starts here.</p>
+          <a class="cta-btn" href="/contact">Call To Action</a>
+        </div>
+
+      </div>
+    </section>
+   
+
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <p>Approach Us</p>
+        </div>
+
+        <div>
+          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d242.42916886241647!2d72.87333406826843!3d19.175843983211514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1692738442035!5m2!1sen!2sin" frameborder="0" allowfullscreen></iframe>
+
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Goregaon East, Mumbai - 400065</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>paulfitness@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+91 9867712526</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Paul Fitness<span>.</span></h3>
+              <p>
+                Goregaon East<br>
+                Mumbai - 400065<br><br>
+                <strong>Phone:</strong> +91 9867712526<br>
+                <strong>Email:</strong> paulfitness@gmail.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href=/services>Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/gallery">Gallery</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/contact">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Personal Training</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Group Fitness Classes</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Nutrition Councelling</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Online Workout</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Fitness Goals</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Workshop & Challenges</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Working Hours</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"><b>Monday - Saturday:</b></a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">6:00 am - 11:00 pm</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"><b>Sunday:</b></a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">9:00 am - 8:00 pm</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"><b>Free 6 days Trial</b></a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"></a>Assured Gifts</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Paul Fitness</span></strong>. All Rights Reserved
+      </div>
+      
+    </div>
+  </footer>
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  <script src="static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="static/assets/vendor/aos/aos.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+
+
+  <script src="static/assets/js/main.js"></script>
+
+</body>
+
+</html>
